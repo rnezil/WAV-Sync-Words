@@ -66,7 +66,7 @@ int main(int argc, char** argv)
 
 	// Close file and print findings
 	printf("Number of syncwords found:\t%u\n", syncword_count);
-	printf("Time elapsed between syncwords:\t%1.6fms\n", interval_average/48);
+	printf("Time elapsed between syncwords:\t%1.6fms\n", interval_average/(((float)h.sample_rate)/1000));
 	return(fclose(f));
 }
 
